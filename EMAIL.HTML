@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <input type="text" id="EMAIL" placeholder="Enetr Your EMAIL(QQQQQQQQ@EMAIL.COM)">
+        <p id="message"></p>
+        <script>
+            let pan=document.getElementById("EMAIL");
+            pan.addEventListener("input",function(){
+                let str=pan.value.toUpperCase();
+                const panregex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    if(panregex.test(str)){
+                        document.getElementById("message").innerHTML="Valid EMAIL";
+                        document.getElementById("message").style="color:green";
+                    }else{
+                        document.getElementById("message").innerHTML="Invalid EMAIL";
+                        document.getElementById("message").style="color:red";
+                    }
+            })
+        </script>
+    </body>
+</html>

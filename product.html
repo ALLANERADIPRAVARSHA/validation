@@ -1,0 +1,24 @@
+<html>
+    <body>
+        Total price:<p id="total price">50</p><br>
+        <button onclick="Dec()">-</button>
+        <input type="text" id="quantity" value="1">
+        <button onclick="Inc()">+</button>
+        <script>
+            function Inc(){
+                let ip=document.getElementById("quantity").value;
+                ip++;
+                document.getElementById("quantity").value=ip;
+                document.getElementById("total price").innerHTML=ip*30;
+            }
+            function Dec(){
+                let ip=document.getElementById("quantity").value;
+                if(ip>1){
+                    ip--;
+                    document.getElementById("quantity").value=ip;
+                    document.getElementById("total price").innerHTML=ip*30;
+                }
+            }
+        </script>
+    </body>
+</html>
